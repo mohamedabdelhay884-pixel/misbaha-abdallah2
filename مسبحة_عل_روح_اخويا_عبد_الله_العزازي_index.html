@@ -1,0 +1,553 @@
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>مسبحة جارية على روح فقيدنا - عبد الله العزازي رحمه الله</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Tajawal:wght@300;400;500;700;800&family=Reem+Kufi:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<script>
+tailwind.config={
+  theme:{
+    extend:{
+      fontFamily:{ tajawal:['Tajawal'], amiri:['Amiri'], reem:['Reem Kufi'] },
+      colors:{
+        emeraldDeep:'#0f2e26',
+        emeraldMid:'#164a3a',
+        gold:'#c8a44a',
+        goldLight:'#e9d8a6',
+        cream:'#fdfbf5',
+        sand:'#f6f1e6'
+      }
+    }
+  }
+}
+</script>
+<style>
+*{scroll-behavior:smooth}
+body{background:#fdfbf5;color:#1a2e26}
+.islamic-pattern{
+  background-image: radial-gradient(circle at 1px 1px, rgba(200,164,74,0.12) 1px, transparent 0);
+  background-size:22px 22px;
+}
+.glass{
+  background:rgba(255,255,255,0.82);
+  backdrop-filter: blur(12px);
+  border:1px solid rgba(200,164,74,0.18);
+}
+.counter-ring{
+  background: conic-gradient(#c8a44a var(--p,0%), #e8e6d9 0%);
+}
+.bead{
+  width:14px;height:19px;border-radius:999px;
+  background: linear-gradient(180deg,#1e4d3d,#0f2e26);
+  border:1px solid #c8a44a;
+  box-shadow: inset 0 2px 4px rgba(255,255,255,0.18), 0 2px 6px rgba(0,0,0,0.2);
+}
+.bead.active{
+  background: linear-gradient(180deg,#c8a44a,#a8872e);
+  transform: translateY(-3px) scale(1.08);
+  box-shadow:0 6px 12px rgba(200,164,74,0.4)
+}
+::-webkit-scrollbar{width:6px;height:6px}
+::-webkit-scrollbar-thumb{background:#c8a44a;border-radius:999px}
+</style>
+</head>
+<body class="font-tajawal overflow-x-hidden">
+<!-- Top Bar -->
+<div class="bg-emeraldDeep text-goldLight text-[13px] py-2 px-4">
+  <div class="max-w-[1200px] mx-auto flex items-center justify-between">
+    <div class="flex items-center gap-3">
+      <span class="hidden md:inline-flex items-center gap-2"><i class="fa-solid fa-mosque text-gold"></i> صدقة جارية - نسألكم الدعاء</span>
+      <span class="md:hidden">بسم الله الرحمن الرحيم</span>
+    </div>
+    <div class="flex items-center gap-3">
+      <span id="hijriDate" class="opacity-80">الجمعة ١٧ شعبان ١٤٤٦ هـ</span>
+      <button onclick="sharePage()" class="bg-white/10 hover:bg-white/20 px-3 py-1 rounded-full flex items-center gap-2 transition"><i class="fa-solid fa-share-nodes"></i> مشاركة الأجر</button>
+    </div>
+  </div>
+</div>
+
+<!-- Header -->
+<header class="sticky top-0 z-40 bg-cream/90 backdrop-blur-xl border-b border-[#e9e1c8]">
+  <div class="max-w-[1200px] mx-auto px-4 md:px-6 py-3 flex items-center justify-between">
+    <div class="flex items-center gap-3">
+      <div class="w-10 h-10 rounded-xl bg-emeraldDeep flex items-center justify-center text-gold text-lg"><i class="fa-solid fa-book-quran"></i></div>
+      <div>
+        <h1 class="font-amiri font-bold text-[18px] leading-none text-emeraldDeep">مسبحة الفقيد</h1>
+        <p class="text-[11px] text-[#8a7d5e] tracking-widest">صَدَقَةٌ جَارِيَة</p>
+      </div>
+    </div>
+    <nav class="hidden md:flex items-center gap-6 text-[14px] font-medium text-emeraldDeep">
+      <a href="#memory" class="hover:text-gold transition">ذكرى الفقيد</a>
+      <a href="#tasbeeh" class="bg-emeraldDeep text-white px-4 py-2 rounded-full">المسبحة الإلكترونية <i class="fa-solid fa-hands-praying mr-2"></i></a>
+      <a href="#dua" class="hover:text-gold transition">دعاء المتوفى</a>
+    </nav>
+    <button id="mobileMenuBtn" class="md:hidden w-9 h-9 rounded-full bg-emeraldDeep text-white flex items-center justify-center"><i class="fa-solid fa-bars"></i></button>
+  </div>
+  <div id="mobileMenu" class="hidden md:hidden bg-white border-t px-4 py-3 space-y-2">
+    <a href="#memory" class="block py-2">ذكرى الفقيد</a>
+    <a href="#tasbeeh" class="block py-2 text-emeraldDeep font-bold">المسبحة الإلكترونية</a>
+    <a href="#dua" class="block py-2">دعاء المتوفى</a>
+  </div>
+</header>
+
+<!-- Hero -->
+<section class="relative overflow-hidden bg-emeraldDeep islamic-pattern">
+  <div class="absolute inset-0 opacity-[0.07]" style="background-image:url('data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22200%22 height=%22200%22><text x=%2250%%22 y=%2250%%22 dominant-baseline=%22middle%22 text-anchor=%22middle%22 font-size=%22140%22 fill=%22%23c8a44a%22>ﷲ</text></svg>');"></div>
+  <div class="max-w-[1200px] mx-auto px-4 md:px-6 py-8 md:py-12 relative">
+    <!-- Basmala -->
+    <div class="text-center mb-6">
+      <p class="font-amiri text-gold text-[22px] md:text-[28px]">بِسْمِ اللهِ الرَّحْمٰنِ الرَّحِيْمِ</p>
+      <div class="flex items-center justify-center gap-3 mt-2">
+        <span class="h-[1px] w-12 bg-gold/40"></span>
+        <span class="text-goldLight/70 text-xs tracking-widest">إِنَّا لِلَّهِ وَإِنَّا إِلَيْهِ رَاجِعُونَ</span>
+        <span class="h-[1px] w-12 bg-gold/40"></span>
+      </div>
+    </div>
+
+    <div class="grid lg:grid-cols-[420px_1fr] gap-6 lg:gap-8 items-start">
+      <!-- Image Card -->
+      <div id="memory" class="bg-white rounded-[24px] overflow-hidden shadow-[0_20px_60px_rgba(0,0,0,0.18)] border border-gold/20">
+        <div class="relative">
+          <div class="absolute top-3 right-3 z-10 bg-emeraldDeep text-gold text-[11px] px-3 py-1 rounded-full flex items-center gap-2"><span class="w-2 h-2 bg-emerald-400 rounded-full animate-pulse"></span> في ذمة الله</div>
+          <div class="h-[360px] md:h-[430px] overflow-hidden bg-[#ecebe4] relative">
+            <img src="https://www.designarena.ai/u/e02d39a5-8ff0-46ed-abc3-ba1288ffb3dc" alt="عبد الله العزازي" class="w-full h-full object-cover object-top">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/55 via-transparent to-transparent"></div>
+            <div class="absolute bottom-0 inset-x-0 p-5 text-white">
+              <div class="inline-flex items-center gap-2 bg-white/15 backdrop-blur px-3 py-1 rounded-full text-[12px] border border-white/20 mb-2"> <i class="fa-regular fa-heart"></i> زوج أختي الحبيب</div>
+              <h2 class="font-amiri text-[28px] font-bold leading-none">عبد الله العزازي</h2>
+              <p class="text-white/80 text-[13px] mt-1">رحمه الله رحمة واسعة وأسكنه فسيح جناته</p>
+            </div>
+          </div>
+          <div class="px-4 py-3 bg-sand flex items-center justify-between">
+            <div class="flex items-center gap-2 text-emeraldDeep">
+              <i class="fa-solid fa-qrcode text-[18px]"></i>
+              <div class="text-[11px] leading-tight">
+                <p class="font-bold">وثيقة الأجر</p>
+                <p class="text-[#8a7d5e]">كل تسبيحة تهدى لروحه</p>
+              </div>
+            </div>
+            <div class="text-left">
+              <p class="text-[10px] text-[#8a7d5e]">تاريخ الوفاة</p>
+              <p class="text-[13px] font-bold text-emeraldDeep">١٤٤٦ هـ - رحمك الله</p>
+            </div>
+          </div>
+        </div>
+        <div class="p-4">
+          <div class="bg-emeraldDeep rounded-2xl p-4 text-center text-white relative overflow-hidden">
+            <i class="fa-solid fa-quote-right absolute top-2 right-3 text-white/10 text-2xl"></i>
+            <p class="font-amiri text-gold text-[15px]">اللهم اجعل قبره روضة من رياض الجنة</p>
+            <p class="text-white/70 text-[12px] mt-1">ولا تجعله حفرة من حفر النار - اللهم آنس وحشته</p>
+            <div class="flex justify-center gap-1.5 mt-3">
+              <span class="w-6 h-[2px] bg-gold rounded-full"></span>
+              <span class="w-1.5 h-[2px] bg-gold/40 rounded-full"></span>
+              <span class="w-6 h-[2px] bg-gold rounded-full"></span>
+            </div>
+          </div>
+          <div class="flex gap-2 mt-3">
+            <button onclick="document.getElementById('dua').scrollIntoView()" class="flex-1 bg-gold text-emeraldDeep py-2.5 rounded-full font-bold text-[13px] hover:bg-[#b8922f] transition"><i class="fa-solid fa-hands-praying ml-1"></i> ادع له</button>
+            <button onclick="sharePage()" class="flex-1 bg-white border border-emeraldDeep text-emeraldDeep py-2.5 rounded-full font-bold text-[13px] flex items-center justify-center gap-1"><i class="fa-solid fa-share"></i> شارك الأجر</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Text Content -->
+      <div class="text-white">
+        <div class="inline-flex items-center gap-2 bg-gold text-emeraldDeep px-4 py-1.5 rounded-full text-[12px] font-bold"> <span class="w-2 h-2 bg-emeraldDeep rounded-full"></span> مسبحة على روح فقيدنا الغالي</div>
+        <h3 class="font-amiri text-[28px] md:text-[40px] leading-[1.1] font-bold mt-4">اللهم اجعل ثواب<br><span class="text-gold">هذا الذكر صدقةً</span><br>عن روح فقيدنا</h3>
+        <p class="text-white/75 leading-7 text-[15px] mt-4 max-w-[620px]">نهدي ثواب كل تسبيحة وذكر ودعاء إلى روح فقيدنا الحبيب <span class="text-gold font-bold">عبد الله العزازي - زوج أختي</span>، سائلين المولى عز وجل أن يجعلها نورًا في قبره، ورفعة في درجاته، وشفيعة له يوم القيامة. لا تحرموه من دعوة صادقة.</p>
+
+        <!-- Stats -->
+        <div class="grid grid-cols-3 gap-3 mt-6">
+          <div class="bg-white rounded-2xl p-3 md:p-4 text-center">
+            <p class="text-gold font-amiri text-xl md:text-2xl font-bold" id="heroTotal">0</p>
+            <p class="text-emeraldDeep text-[11px] md:text-xs font-bold">إجمالي التسبيحات</p>
+            <p class="text-[#9a8f6f] text-[10px]">مهداة لروحه الطاهرة</p>
+          </div>
+          <div class="bg-white/10 backdrop-blur border border-white/15 rounded-2xl p-3 md:p-4 text-center">
+            <p class="text-gold font-amiri text-xl md:text-2xl font-bold">١٢٤</p>
+            <p class="text-white text-[11px] md:text-xs font-bold">مُهدي للثواب</p>
+            <p class="text-white/60 text-[10px]">يذكرونه الآن</p>
+          </div>
+          <div class="bg-gold rounded-2xl p-3 md:p-4 text-center text-emeraldDeep">
+            <p class="font-amiri text-xl md:text-2xl font-bold">٣٣</p>
+            <p class="text-[11px] md:text-xs font-bold">ختمة دعاء</p>
+            <p class="text-emeraldDeep/70 text-[10px]">تم إهداؤها</p>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-[18px] p-4 mt-6 text-emeraldDeep">
+          <div class="flex items-center gap-2 mb-3">
+            <span class="w-7 h-7 rounded-full bg-emeraldDeep text-gold flex items-center justify-center text-xs"><i class="fa-solid fa-scroll"></i></span>
+            <h4 class="font-bold text-[14px]">النية عند التسبيح</h4>
+            <span class="mr-auto text-[11px] bg-sand px-2 py-1 rounded-full text-emeraldDeep">انسخ النية</span>
+          </div>
+          <p class="font-amiri text-[15px] leading-7 bg-sand rounded-xl p-3 border border-gold/15">“نويت بكل تسبيحة أذكر الله بها أن يكون ثوابها هدية واصلة إلى روح عبد الله العزازي، اللهم تقبلها واجعلها نورًا له في قبره”</p>
+          <div class="flex gap-2 mt-3">
+            <button onclick="copyNiyyah()" class="text-[12px] bg-emeraldDeep text-white px-4 py-2 rounded-full hover:bg-emeraldMid transition">نسخ النية <i class="fa-regular fa-copy mr-1"></i></button>
+            <span class="text-[12px] text-[#8a7d5e] flex items-center">اقرأها بقلب حاضر قبل البدء</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Tasbeeh Section -->
+<section id="tasbeeh" class="max-w-[1200px] mx-auto px-4 md:px-6 -mt-4 md:-mt-6 relative z-10">
+  <div class="bg-white rounded-[24px] shadow-[0_20px_60px_rgba(0,0,0,0.08)] border border-[#e9e1c8] overflow-hidden">
+    <div class="grid lg:grid-cols-[360px_1fr] gap-0">
+      <!-- Right Controls - Adhkar List -->
+      <div class="bg-sand/60 border-l border-[#e9e1c8] p-4 md:p-5 order-2 lg:order-1">
+        <div class="flex items-center justify-between">
+          <h4 class="font-bold text-emeraldDeep flex items-center gap-2"><i class="fa-solid fa-list-ul text-gold"></i> الأذكار المهداة</h4>
+          <span class="text-[11px] bg-white border px-2 py-1 rounded-full">٥ أذكار</span>
+        </div>
+        <p class="text-[12px] text-[#8a7d5e] mt-1">اختر الذكر واضغط على المسبحة، كل ٣٣ يكتمل ختمة</p>
+
+        <div id="azkarList" class="mt-4 space-y-2.5">
+          <!-- injected by JS -->
+        </div>
+
+        <div class="mt-4 bg-emeraldDeep rounded-2xl p-4 text-white">
+          <p class="text-gold text-xs font-bold flex items-center gap-2"><i class="fa-solid fa-chart-simple"></i> تقدمك الإجمالي</p>
+          <div class="flex items-end justify-between mt-2">
+            <div>
+              <p class="text-[26px] font-bold leading-none" id="totalDone">0</p>
+              <p class="text-white/60 text-[11px]">تسبيحة مهداة</p>
+            </div>
+            <div class="text-left">
+              <p class="text-gold font-bold" id="khatmaCount">0 ختمة</p>
+              <p class="text-white/60 text-[11px]">مكتملة</p>
+            </div>
+          </div>
+          <div class="w-full h-2 bg-white/15 rounded-full mt-3 overflow-hidden">
+            <div id="totalProgress" class="h-full bg-gold rounded-full transition-all" style="width:0%"></div>
+          </div>
+          <button onclick="resetAll()" class="w-full mt-3 bg-white/10 hover:bg-white/15 border border-white/15 py-2 rounded-full text-xs transition">تصفير عداد اليوم <i class="fa-solid fa-rotate-left mr-1"></i></button>
+        </div>
+      </div>
+
+      <!-- Main Tasbeeh -->
+      <div class="p-5 md:p-7 order-1 lg:order-2">
+        <div class="flex items-center justify-between flex-wrap gap-3">
+          <div class="inline-flex items-center gap-2 bg-emeraldDeep text-white px-3 py-1.5 rounded-full text-xs"><span class="w-2 h-2 bg-emerald-400 rounded-full animate-pulse"></span> المسبحة النشطة الآن</div>
+          <div class="flex items-center gap-2">
+            <button onclick="toggleSound()" id="soundBtn" class="w-8 h-8 rounded-full bg-sand border flex items-center justify-center text-emeraldDeep hover:bg-white transition"><i class="fa-solid fa-volume-high text-xs"></i></button>
+            <button onclick="decreaseCount()" class="w-8 h-8 rounded-full bg-white border flex items-center justify-center hover:bg-sand transition"><i class="fa-solid fa-minus text-xs"></i></button>
+            <span class="text-[11px] text-[#8a7d5e]">تراجع</span>
+          </div>
+        </div>
+
+        <div class="mt-4 bg-cream border border-gold/15 rounded-[18px] p-4 flex items-start gap-3">
+          <div class="w-8 h-8 rounded-full bg-gold text-emeraldDeep flex items-center justify-center flex-shrink-0 mt-1"><i class="fa-solid fa-quote-right text-xs"></i></div>
+          <div>
+            <p class="text-[11px] text-[#9a8f6f] font-bold tracking-widest">الذِّكْرُ المُخْتَار</p>
+            <p id="activeDhikrText" class="font-amiri text-[18px] md:text-[20px] leading-7 text-emeraldDeep font-bold mt-1">سبحان الله وبحمده، سبحان الله العظيم</p>
+            <p class="text-[11px] text-[#b0a48a] mt-1">اضغط على زر التسبيح أو المس المسبحة • الهدف: <span id="activeTarget">33</span></p>
+          </div>
+        </div>
+
+        <!-- Counter Circle -->
+        <div class="flex flex-col items-center mt-6">
+          <div class="relative">
+            <div id="progressRing" class="counter-ring w-[210px] h-[210px] md:w-[240px] md:h-[240px] rounded-full p-[6px] transition-all duration-300" style="--p:0%">
+              <div class="w-full h-full bg-white rounded-full flex flex-col items-center justify-center shadow-inner border border-[#f0e6c8] relative">
+                <p class="text-[10px] tracking-[0.18em] text-[#b0a48a] font-bold">عَدَدُ التَّسْبِيحَات</p>
+                <p id="currentCount" class="font-amiri text-[72px] font-bold leading-none text-emeraldDeep">0</p>
+                <p id="currentTargetLabel" class="text-gold font-bold text-sm -mt-1">من ٣٣</p>
+                <div class="flex items-center gap-1 mt-2">
+                  <span class="w-1.5 h-1.5 bg-emeraldDeep rounded-full"></span>
+                  <span class="w-8 h-[2px] bg-gold"></span>
+                  <span class="w-1.5 h-1.5 bg-gold rounded-full"></span>
+                </div>
+                <p class="text-[10px] text-[#b0a48a] mt-1">اضغط للتسبيح</p>
+              </div>
+            </div>
+            <div class="absolute -top-1 -right-1 bg-gold text-emeraldDeep w-8 h-8 rounded-full flex items-center justify-center text-xs font-bold shadow">٣٣</div>
+          </div>
+
+          <!-- Beads visual -->
+          <div class="flex items-center gap-1.5 mt-5 flex-wrap justify-center" id="beads">
+            <!-- 9 beads -->
+          </div>
+
+          <!-- Big Button -->
+          <button id="tasbeehBtn" class="mt-5 w-full md:w-[360px] bg-emeraldDeep hover:bg-emeraldMid active:scale-[0.98] text-white py-4 rounded-full font-bold text-[18px] shadow-[0_12px_30px_rgba(15,46,38,0.25)] flex items-center justify-center gap-3 transition">
+            <span class="w-8 h-8 bg-white/15 rounded-full flex items-center justify-center"><i class="fa-solid fa-hand-sparkles text-gold text-sm"></i></span>
+            سَبِّحْ <span class="bg-white/15 px-2 py-1 rounded-full text-xs">اضغط</span>
+          </button>
+          <div class="flex items-center gap-2 mt-3 text-[11px]">
+            <span class="bg-gold text-emeraldDeep px-3 py-1 rounded-full font-bold flex items-center gap-1"><i class="fa-solid fa-keyboard"></i> المسافة = تسبيحة</span>
+            <span class="bg-white border px-3 py-1 rounded-full text-[#8a7d5e]">النقر المتتالي يعمل</span>
+          </div>
+          <p class="text-[11px] text-[#9a8f6f] mt-2 text-center">كلما أكملت ٣٣ يُحسب ختمة جديدة ويُهدى ثوابها لروحه</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Dua Section -->
+<section id="dua" class="max-w-[1200px] mx-auto px-4 md:px-6 mt-8">
+  <div class="grid lg:grid-cols-[1.1fr_380px] gap-6">
+    <div class="bg-white rounded-[24px] border border-[#e9e1c8] p-6 md:p-8 shadow-sm">
+      <div class="flex items-center gap-3">
+        <div class="w-9 h-9 rounded-full bg-emeraldDeep text-gold flex items-center justify-center"><i class="fa-solid fa-hands-holding-circle text-sm"></i></div>
+        <div>
+          <h4 class="font-amiri font-bold text-[20px] text-emeraldDeep">دعاء للمتوفى</h4>
+          <p class="text-[12px] text-[#9a8f6f]">اقرأه واهده لروحه الطاهرة - عبد الله العزازي</p>
+        </div>
+        <button onclick="copyDua()" class="mr-auto bg-sand hover:bg-white border px-3 py-1.5 rounded-full text-xs flex items-center gap-2 transition"><i class="fa-regular fa-copy"></i> نسخ الدعاء</button>
+      </div>
+
+      <div class="mt-6 space-y-4 font-amiri text-[17px] leading-8 text-[#1e3a2f]">
+        <p class="bg-sand rounded-2xl p-4 border border-gold/10">اللهم اغفر له وارحمه، وعافه واعفُ عنه، وأكرم نزله، ووسّع مدخله، ونوّر قبره، وآنس وحشته، وثبّته عند السؤال.</p>
+        <p class="bg-white border border-[#e9e1c8] rounded-2xl p-4">اللهم اجعل قبره روضةً من رياض الجنة، واجعل الفردوس الأعلى مستقره، واجمعه بأحبابه في جنات النعيم.</p>
+        <p class="bg-emeraldDeep text-white rounded-2xl p-4 text-center">اللهم ارحمه رحمةً تطمئن بها روحه، واجعل كل دعوة صادقة تصله نورًا ورحمة.</p>
+        <p class="text-center font-tajawal text-[13px] text-[#9a8f6f]">لا تنسوه من صالح دعائكم - الدعاء يصل للميت كهدية من نور</p>
+      </div>
+
+      <div class="flex flex-wrap gap-2 mt-6">
+        <button onclick="makeDua()" class="bg-gold text-emeraldDeep px-6 py-3 rounded-full font-bold text-sm flex items-center gap-2 hover:bg-[#b9972e] transition"><i class="fa-solid fa-heart"></i> اللهم آمين - دعوت له</button>
+        <button onclick="shareDua()" class="bg-emeraldDeep text-white px-5 py-3 rounded-full font-bold text-sm flex items-center gap-2"><i class="fa-brands fa-whatsapp"></i> إرسال الدعاء واتساب</button>
+        <span class="flex items-center text-xs text-[#9a8f6f]"><i class="fa-solid fa-users ml-1"></i> <span id="duaCounter">1,482</span> دعوا له اليوم</span>
+      </div>
+    </div>
+
+    <div class="space-y-4">
+      <div class="bg-emeraldDeep rounded-[24px] p-5 text-white relative overflow-hidden">
+        <div class="absolute -left-6 -top-6 w-24 h-24 bg-white/5 rounded-full"></div>
+        <h5 class="font-amiri text-gold text-[18px] font-bold">كيف يصل الثواب؟</h5>
+        <p class="text-white/70 text-xs leading-6 mt-2">قال رسول الله ﷺ: “إذا مات ابن آدم انقطع عمله إلا من ثلاث: صدقة جارية، أو علم ينتفع به، أو ولد صالح يدعو له” - وتهدي ثواب الذكر من الولد الصالح والدعاء.</p>
+        <div class="grid grid-cols-3 gap-2 mt-4">
+          <div class="bg-white/10 rounded-xl p-2 text-center border border-white/10">
+            <i class="fa-solid fa-hand-holding-heart text-gold"></i>
+            <p class="text-[11px] mt-1 font-bold">الدعاء</p>
+            <p class="text-[10px] text-white/60">يصل كهدية</p>
+          </div>
+          <div class="bg-gold rounded-xl p-2 text-center text-emeraldDeep">
+            <i class="fa-solid fa-book-quran"></i>
+            <p class="text-[11px] mt-1 font-bold">الذكر</p>
+            <p class="text-[10px] opacity-70">يُنير القبر</p>
+          </div>
+          <div class="bg-white/10 rounded-xl p-2 text-center border border-white/10">
+            <i class="fa-solid fa-people-group text-gold"></i>
+            <p class="text-[11px] mt-1 font-bold">المشاركة</p>
+            <p class="text-[10px] text-white/60">يضاعف الأجر</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="bg-white rounded-[24px] border border-[#e9e1c8] p-5">
+        <h5 class="font-bold text-emeraldDeep flex items-center gap-2"><i class="fa-regular fa-envelope text-gold"></i> أترك رسالة دعاء</h5>
+        <textarea id="msgInput" rows="3" placeholder="اكتب دعوة من قلبك لعبد الله... سيُحفظ ويُهدى لروحه" class="w-full mt-3 bg-sand border border-[#e9e1c8] rounded-2xl p-3 text-sm focus:outline-none focus:border-gold"></textarea>
+        <button onclick="sendMessage()" class="w-full mt-3 bg-emeraldDeep text-white py-2.5 rounded-full text-sm font-bold hover:bg-emeraldMid transition">إرسال الدعاء <i class="fa-solid fa-paper-plane mr-1"></i></button>
+        <div id="messages" class="mt-4 space-y-2 max-h-[160px] overflow-auto pr-1">
+          <div class="bg-sand rounded-xl p-3 border text-xs leading-5"><p class="font-bold text-emeraldDeep">أم أحمد</p><p class="text-[#5a4f34]">اللهم ارحمه واغفر له واجعل مثواه الجنة يا رب العالمين</p></div>
+          <div class="bg-white border rounded-xl p-3 text-xs leading-5"><p class="font-bold text-emeraldDeep">محمد - صديق</p><p class="text-[#5a4f34]">رحمك الله يا عبد الله كنت طيب القلب، اللهم اجعل قبرك نور</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="mt-10 bg-emeraldDeep text-white">
+  <div class="max-w-[1200px] mx-auto px-4 md:px-6 py-8 text-center">
+    <p class="font-amiri text-gold text-xl">﴿ وَبَشِّرِ الصَّابِرِينَ ﴾</p>
+    <p class="text-white/60 text-xs mt-2 max-w-[620px] mx-auto leading-6">هذه الصفحة صدقة جارية على روح <span class="text-gold font-bold">عبد الله العزازي</span> - زوج أختي. كل تسبيحة تُحتسب في ميزان حسناته بإذن الله. شارك الرابط مع الأهل والأحباب ليستمر الأجر.</p>
+    <div class="flex justify-center gap-2 mt-5">
+      <button onclick="sharePage()" class="bg-gold text-emeraldDeep px-5 py-2 rounded-full text-xs font-bold flex items-center gap-2"><i class="fa-solid fa-link"></i> نسخ رابط المسبحة</button>
+      <button onclick="window.scrollTo({top:0,behavior:'smooth'})" class="bg-white/10 border border-white/20 px-5 py-2 rounded-full text-xs">العودة للأعلى <i class="fa-solid fa-arrow-up mr-1"></i></button>
+    </div>
+    <p class="text-white/30 text-[11px] mt-6">تصميم بإحسان • نسألكم الفاتحة والدعاء • اللهم تقبل</p>
+  </div>
+</footer>
+
+<!-- Completion Modal -->
+<div id="khatmaModal" class="fixed inset-0 bg-black/50 backdrop-blur-sm hidden items-center justify-center z-50 p-4">
+  <div class="bg-white rounded-[24px] max-w-[420px] w-full p-6 text-center shadow-2xl">
+    <div class="w-14 h-14 bg-emeraldDeep text-gold rounded-full flex items-center justify-center mx-auto text-xl"><i class="fa-solid fa-crown"></i></div>
+    <h3 class="font-amiri font-bold text-[22px] text-emeraldDeep mt-3">ما شاء الله! أكملت ختمة</h3>
+    <p class="text-[#8a7d5e] text-sm mt-1 leading-6">تم إهداء ثواب <span id="modalCount">33</span> تسبيحة من <span id="modalDhikr" class="font-bold text-emeraldDeep">الذكر</span> إلى روح الفقيد عبد الله العزازي رحمه الله</p>
+    <div class="bg-sand rounded-xl p-3 mt-4 font-amiri text-emeraldDeep">اللهم تقبلها واجعلها نورًا في قبره</div>
+    <button onclick="closeModal()" class="w-full bg-emeraldDeep text-white py-3 rounded-full font-bold mt-4">تقبل الله - متابعة التسبيح</button>
+    <button onclick="sharePage();closeModal()" class="w-full bg-white border py-2.5 rounded-full text-sm mt-2">مشاركة الأجر مع الأهل</button>
+  </div>
+</div>
+
+<div id="toast" class="fixed bottom-4 left-1/2 -translate-x-1/2 bg-emeraldDeep text-white px-5 py-3 rounded-full text-sm shadow-xl hidden items-center gap-2 z-50"><i class="fa-solid fa-check text-gold"></i> <span id="toastMsg">تم النسخ</span></div>
+
+<script>
+const azkar = [
+  {id:1, text:'سبحان الله وبحمده، سبحان الله العظيم', target:33, count:0, icon:'fa-leaf'},
+  {id:2, text:'أستغفر الله العظيم وأتوب إليه', target:33, count:0, icon:'fa-hand-holding-heart'},
+  {id:3, text:'لا إله إلا أنت سبحانك إني كنت من الظالمين', target:33, count:0, icon:'fa-moon'},
+  {id:4, text:'اللهم صلِّ وسلم على سيدنا محمد', target:33, count:0, icon:'fa-star-and-crescent'},
+  {id:5, text:'لا إله إلا الله وحده لا شريك له، له الملك وله الحمد وهو على كل شيء قدير', target:33, count:0, icon:'fa-crown'},
+];
+let activeId = 1;
+let soundOn = true;
+let totalDuaClicks = 1482;
+
+const azkarListEl = document.getElementById('azkarList');
+const activeTextEl = document.getElementById('activeDhikrText');
+const activeTargetEl = document.getElementById('activeTarget');
+const currentCountEl = document.getElementById('currentCount');
+const currentTargetLabel = document.getElementById('currentTargetLabel');
+const progressRing = document.getElementById('progressRing');
+const totalDoneEl = document.getElementById('totalDone');
+const khatmaCountEl = document.getElementById('khatmaCount');
+const totalProgressEl = document.getElementById('totalProgress');
+const heroTotalEl = document.getElementById('heroTotal');
+const beadsEl = document.getElementById('beads');
+const duaCounterEl = document.getElementById('duaCounter');
+
+function load(){
+  const saved = localStorage.getItem('tasbeeh-azazi-v2');
+  if(saved){
+    try{ const data = JSON.parse(saved); data.forEach((d,i)=>{ if(azkar[i]) azkar[i].count=d.count}); }catch(e){}
+  }
+}
+function save(){ localStorage.setItem('tasbeeh-azazi-v2', JSON.stringify(azkar)); }
+
+function renderList(){
+  azkarListEl.innerHTML = azkar.map(z=>{
+    const isActive = z.id===activeId;
+    const pct = Math.min(100, (z.count % z.target)/z.target*100);
+    if(z.count>0 && z.count%z.target===0 && z.count!==0) pct2=100; else pct2=pct;
+    return `<button onclick="selectDhikr(${z.id})" class="w-full text-right rounded-2xl p-3 border flex gap-3 items-start transition ${isActive?'bg-emeraldDeep text-white border-emeraldDeep shadow-md':'bg-white hover:bg-white border-[#e9e1c8] text-emeraldDeep'}">
+      <span class="w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5 ${isActive?'bg-gold text-emeraldDeep':'bg-sand text-emeraldDeep border'}"><i class="fa-solid ${z.icon} text-[11px]"></i></span>
+      <span class="flex-1">
+        <span class="font-amiri text-[13px] leading-6 font-bold block ${isActive?'text-white':'text-emeraldDeep'}">${z.text}</span>
+        <span class="flex items-center gap-2 mt-2">
+          <span class="flex-1 h-1.5 ${isActive?'bg-white/20':'bg-sand'} rounded-full overflow-hidden"><span style="width:${pct}% " class="h-full ${isActive?'bg-gold':'bg-emeraldDeep'} block rounded-full transition-all"></span></span>
+          <span class="text-[11px] font-bold ${isActive?'text-gold':'text-[#9a8f6f]'}">${z.count} / ${z.target}</span>
+        </span>
+      </span>
+      ${isActive?'<span class="w-2 h-2 bg-gold rounded-full mt-2"></span>':''}
+    </button>`
+  }).join('');
+}
+
+function renderActive(){
+  const a = azkar.find(x=>x.id===activeId);
+  activeTextEl.textContent = a.text;
+  activeTargetEl.textContent = a.target;
+  currentTargetLabel.textContent = `من ${a.target.toLocaleString('ar-EG')}`;
+  currentCountEl.textContent = a.count;
+  const inCycle = a.count % a.target ===0 && a.count!==0 ? a.target : a.count % a.target;
+  const pct = a.count===0?0: (inCycle / a.target)*100;
+  if(a.count>0 && a.count%a.target===0) progressRing.style.setProperty('--p','100%');
+  else progressRing.style.setProperty('--p', pct+'%');
+  // beads
+  const filled = inCycle;
+  beadsEl.innerHTML = Array.from({length: a.target>33?12:9}).map((_,i)=>{
+    const active = i < Math.min(filled,9);
+    return `<span class="bead ${active?'active':''}"></span>`
+  }).join('');
+  updateTotals();
+}
+
+function updateTotals(){
+  const total = azkar.reduce((s,x)=>s+x.count,0);
+  totalDoneEl.textContent = total.toLocaleString('ar-EG');
+  heroTotalEl.textContent = total.toLocaleString('ar-EG');
+  const khatmas = Math.floor(total/33);
+  khatmaCountEl.textContent = khatmas.toLocaleString('ar-EG')+' ختمة';
+  totalProgressEl.style.width = Math.min(100, (total%100))+'%';
+  duaCounterEl.textContent = totalDuaClicks.toLocaleString('ar-EG');
+}
+
+function selectDhikr(id){ activeId=id; renderList(); renderActive(); }
+function increment(){
+  const a = azkar.find(x=>x.id===activeId);
+  a.count++;
+  // vibration
+  if(navigator.vibrate) navigator.vibrate(30);
+  // sound tick
+  if(soundOn){
+    try{
+      const ctx = new (window.AudioContext||window.webkitAudioContext)();
+      const o=ctx.createOscillator(); const g=ctx.createGain();
+      o.frequency.value= 880; g.gain.value=0.05; o.connect(g).connect(ctx.destination); o.start(); setTimeout(()=>{o.stop(); ctx.close()},90);
+    }catch(e){}
+  }
+  // animation
+  currentCountEl.animate([{transform:'scale(1)'},{transform:'scale(1.12)'},{transform:'scale(1)'}],{duration:180});
+  tasbeehBtn.animate([{transform:'scale(1)'},{transform:'scale(0.97)'},{transform:'scale(1)'}],{duration:150});
+  if(a.count % a.target ===0){
+    document.getElementById('modalCount').textContent = a.target;
+    document.getElementById('modalDhikr').textContent = a.text;
+    document.getElementById('khatmaModal').classList.remove('hidden');
+    document.getElementById('khatmaModal').classList.add('flex');
+    totalDuaClicks+=1;
+  }
+  save(); renderList(); renderActive();
+}
+function decreaseCount(){
+  const a = azkar.find(x=>x.id===activeId);
+  if(a.count>0){ a.count--; save(); renderList(); renderActive(); showToast('تم التراجع خطوة');}
+}
+function resetAll(){
+  if(confirm('هل تريد تصفير عداد اليوم؟ سيتم حفظ الأجر عند الله وتصفير الأرقام محلياً')){
+    azkar.forEach(a=>a.count=0); save(); renderList(); renderActive(); showToast('تم التصفير - تقبل الله');
+  }
+}
+function toggleSound(){
+  soundOn=!soundOn;
+  document.getElementById('soundBtn').innerHTML = soundOn?'<i class="fa-solid fa-volume-high text-xs"></i>':'<i class="fa-solid fa-volume-xmark text-xs"></i>';
+  showToast(soundOn?'تم تفعيل الصوت':'تم كتم الصوت');
+}
+function showToast(msg){
+  const t=document.getElementById('toast'); document.getElementById('toastMsg').textContent=msg; t.classList.remove('hidden'); t.classList.add('flex');
+  setTimeout(()=>{t.classList.add('hidden'); t.classList.remove('flex')},2200);
+}
+function copyNiyyah(){
+  navigator.clipboard.writeText('نويت بكل تسبيحة أذكر الله بها أن يكون ثوابها هدية واصلة إلى روح عبد الله العزازي، اللهم تقبلها واجعلها نورًا له في قبره');
+  showToast('تم نسخ النية - تقبل الله');
+}
+function copyDua(){
+  const dua = `اللهم اغفر له وارحمه، وعافه واعفُ عنه، وأكرم نزله، ووسّع مدخله، ونوّر قبره، وآنس وحشته، وثبّته عند السؤال. اللهم اجعل قبره روضةً من رياض الجنة، واجعل الفردوس الأعلى مستقره.`;
+  navigator.clipboard.writeText(dua); showToast('تم نسخ الدعاء');
+}
+function makeDua(){ totalDuaClicks++; updateTotals(); showToast('تقبل الله دعاءك لعبد الله رحمه الله'); }
+function shareDua(){
+  const text = `دعاء لفقيدنا عبد الله العزازي رحمه الله: اللهم اغفر له وارحمه واجعل قبره روضة من رياض الجنة. ادع له معنا: ${location.href}`;
+  window.open('https://wa.me/?text='+encodeURIComponent(text),'_blank');
+}
+function sharePage(){
+  const url = location.href;
+  if(navigator.share){ navigator.share({title:'مسبحة عبد الله العزازي', text:'أهد ثواب تسبيحة لروح فقيدنا', url});}
+  else { navigator.clipboard.writeText(url); showToast('تم نسخ رابط المسبحة - شاركه ولك الأجر');}
+}
+function closeModal(){ document.getElementById('khatmaModal').classList.add('hidden'); document.getElementById('khatmaModal').classList.remove('flex'); }
+function sendMessage(){
+  const v=document.getElementById('msgInput').value.trim();
+  if(!v) return showToast('اكتب دعاء أولاً');
+  const box=document.getElementById('messages');
+  const div=document.createElement('div');
+  div.className='bg-gold/15 border border-gold/20 rounded-xl p-3 text-xs leading-5';
+  div.innerHTML=`<p class="font-bold text-emeraldDeep">أنت</p><p class="text-[#5a4f34]">${v}</p>`;
+  box.prepend(div); document.getElementById('msgInput').value=''; showToast('تم إرسال دعائك - في ميزان حسناتك');
+}
+
+const tasbeehBtn = document.getElementById('tasbeehBtn');
+tasbeehBtn.addEventListener('click', increment);
+tasbeehBtn.addEventListener('touchstart', (e)=>{e.preventDefault(); increment();},{passive:false});
+progressRing.addEventListener('click', increment);
+document.addEventListener('keydown', (e)=>{
+  if(e.code==='Space'){ e.preventDefault(); increment(); }
+  if(e.key>='1' && e.key<='5'){ selectDhikr(parseInt(e.key)); }
+});
+document.getElementById('mobileMenuBtn').addEventListener('click', ()=>{
+  document.getElementById('mobileMenu').classList.toggle('hidden');
+});
+document.getElementById('khatmaModal').addEventListener('click', (e)=>{ if(e.target.id==='khatmaModal') closeModal(); });
+
+load(); renderList(); renderActive();
+</script>
+</body>
+</html>
